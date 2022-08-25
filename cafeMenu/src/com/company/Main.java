@@ -9,41 +9,39 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-
-public class Main {
-    private static final ProductCreationOperations operations = new ProductCreationOperations();
-    public static void main(String[] args) throws IOException {
+//
+//public class Main {
+//    private static final ProductCreationOperations operations = new ProductCreationOperations();
+//
+//    public static void main(String[] args) throws IOException {
 
         // Create product
         // Find
         // Delete
 
 
-        List<Product> products = readFromConsole();
+       // List<Product> products = readFromConsole();
+//
+//        products.forEach(p -> {
+//            try {
+//                operations.createProduct(p);
+//            } catch (IOException e) {
+//                throw new RuntimeException(e);
+//            }
+//        });
+//
+//        operations.saveToProductList(products);
+//
+//    }
 
-        products.forEach(p -> {
-            try {
-                operations.createProduct(p);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        });
+//    private static List<Product> readFromConsole() throws IOException {
+//        try (BufferedReader bf = new BufferedReader(new InputStreamReader(System.in))) {
+//            List<Product> res = new ArrayList<>();
+//
+//            String line;
+//            while ((line = bf.readLine()) != null && !line.equals("exit")) {
+//                res.add(operations.parseProduct(line));
+//            }
+//            return res;
+//        }
 
-        operations.saveToProductList(products);
-
-    }
-
-    private static List<Product> readFromConsole() throws IOException {
-        try (BufferedReader bf = new BufferedReader(new InputStreamReader(System.in))) {
-            List<Product> res = new ArrayList<>();
-
-            String line;
-            while ((line = bf.readLine()) != null && !line.equals("exit")) {
-                res.add(operations.parseProduct(line));
-            }
-            return res;
-        }
-    }
-
-
-}
